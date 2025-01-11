@@ -26,9 +26,66 @@ master_panel_inline_kb = InlineKeyboardMarkup(
 )
 
 
-schedule_management_kb = ReplyKeyboardMarkup(
-    keyboard=[
-        [KeyboardButton(text='Создать')],
-    ],
-    resize_keyboard=True  
+schedule_management_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+        InlineKeyboardButton(text='✏️ Создать', callback_data='create'),
+        InlineKeyboardButton(text='📖 Просмотреть', callback_data='check'),
+        ],
+        [
+        InlineKeyboardButton(text='🚽 Удалить', callback_data='delete'),
+        InlineKeyboardButton(text='📝 Редактировать день', callback_data='redact_day'),
+        ],
+        [InlineKeyboardButton(text='⬅️ Назад', callback_data='back_to_main')],
+    ]
+)
+
+clients_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+        InlineKeyboardButton(text='✏️Добавить', callback_data='add'),
+        InlineKeyboardButton(text='📝 Изменить', callback_data='change'),
+        ],
+        [
+        InlineKeyboardButton(text='✏️Добавить и записать', callback_data='add_and_write'),
+        ],
+        [
+        InlineKeyboardButton(text='⬅️ Назад', callback_data='back_to_main'),    
+        ]
+    ]
+)
+
+records_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+        InlineKeyboardButton(text='📝 Записать', callback_data='recording'),
+        InlineKeyboardButton(text='😢 Отменить', callback_data='cancel'),
+        ],
+        [
+        InlineKeyboardButton(text='📖 Просмотреть', callback_data='check_all_recordings'),
+        InlineKeyboardButton(text='📚 На неделю', callback_data='check_week_recordings'),
+        ],
+        [
+        InlineKeyboardButton(text='📝 Записать нового клиента', callback_data='record_new_client'),
+        ],
+        [
+        InlineKeyboardButton(text='⬅️ Назад', callback_data='back_to_main'),    
+        ],
+    ]
+)
+
+settings_kb = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+        InlineKeyboardButton(text='⚡️ Информация', callback_data='info'),
+        InlineKeyboardButton(text='💼 Кабинет', callback_data='personal_account'),
+        ],
+        [
+        InlineKeyboardButton(text='🗣 Услуги', callback_data='services'),
+        InlineKeyboardButton(text='📖 О сервисе', callback_data='about_service'),
+        ],
+        [
+        InlineKeyboardButton(text='⬅️ Назад', callback_data='back_to_main'),    
+        ],
+    ]
 )
