@@ -18,4 +18,3 @@ async def admin_panel(message: Message, state: FSMContext):
     logger.debug(f'Пользователь {message.from_user.full_name} вошел в админ панель')
     await state.clear()
     await message.delete()
-    
