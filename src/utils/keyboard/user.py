@@ -33,7 +33,7 @@ schedule_management_kb = InlineKeyboardMarkup(
         InlineKeyboardButton(text='📖 Просмотреть', callback_data='check'),
         ],
         [
-        InlineKeyboardButton(text='🚽 Удалить', callback_data='delete'),
+        InlineKeyboardButton(text='🗑 Удалить', callback_data='delete'),
         InlineKeyboardButton(text='📝 Редактировать день', callback_data='redact_day'),
         ],
         [InlineKeyboardButton(text='⬅️ Назад', callback_data='back_to_main')],
