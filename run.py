@@ -6,6 +6,7 @@ from src.handlers import (
     start_router,
     admin_panel_router,
     user_panel_router,
+    schedule_management_router,
 
 )
 
@@ -15,6 +16,7 @@ async def main():
         start_router,
         admin_panel_router,
         user_panel_router,
+        schedule_management_router,
     )
     r = await bot.get_me()
     logger.info(f"Бот запущен: https://t/me/{r.username}")
