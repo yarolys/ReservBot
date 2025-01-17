@@ -2,13 +2,14 @@ from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import Command
-from src.config import logger
 
-from src.utils.filter import AdminRoleFilter
+from datetime import datetime, timedelta
+
+from src.config import logger
 from src.utils.keyboard.user import master_panel_inline_kb, schedule_management_kb, clients_kb, records_kb, settings_kb
 
-router = Router()
 
+router = Router()
 
 #Расписание
 @router.callback_query(lambda c: c.data == 'schedule_management')
