@@ -1,5 +1,5 @@
 import enum
-from datetime import datetime
+from datetime import datetime, time, date
 
 from pydantic import BaseModel, HttpUrl, ConfigDict
 
@@ -26,4 +26,9 @@ class SettingsSchema(BaseModel):
     welcome_message: str
 
 
+class ScheduleSchema(BaseModel):
+    id: int
+    user_id: int
+    date: date
+    time: time
 
