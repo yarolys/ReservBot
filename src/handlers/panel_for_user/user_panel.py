@@ -1,11 +1,6 @@
 from aiogram import F, Router
-from aiogram.fsm.context import FSMContext
-from aiogram.types import Message, CallbackQuery
-from aiogram.filters import Command
+from aiogram.types import CallbackQuery
 
-from datetime import datetime, timedelta
-
-from src.config import logger
 from src.utils.keyboard.user import master_panel_inline_kb, schedule_management_kb, clients_kb, records_kb, settings_kb
 
 
