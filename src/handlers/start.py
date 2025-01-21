@@ -2,7 +2,7 @@ from aiogram import F, Router
 from aiogram.types import Message
 from aiogram.filters import Command
 
-from src.config import BOT_ADMIN_ID, logger
+from src.config import BOT_ADMIN_ID
 from src.utils.keyboard.user import master_panel_inline_kb
 
 router = Router()
